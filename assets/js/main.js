@@ -266,7 +266,7 @@
 					var e = t(window).height(),
 						a = t(window).width();
 					t(".kenburns").attr("width", a), t(".kenburns").attr("height", e), t(".kenburns").kenburns({
-						images: ["http://placehold.it/2440x1578", "http://placehold.it/2440x1578/999/eee", "http://placehold.it/2440x1578/ccc/111"],
+						images: ["https://placehold.it/2440x1578", "https://placehold.it/2440x1578/999/eee", "https://placehold.it/2440x1578/ccc/111"],
 						frames_per_second: 30,
 						display_time: 5e3,
 						fade_time: 1e3,

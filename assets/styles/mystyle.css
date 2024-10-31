@@ -261,13 +261,8 @@ h4 {
 	width: 100%;
 }
 
-.contact-form__wrap {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	justify-content: center;
+.contact-form__wrap form {
+	margin: auto;
 }
 .order-content {
 	padding-top: 50px;
@@ -361,6 +356,7 @@ html {
   font-weight: 700;
   padding: 10px 20px;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 

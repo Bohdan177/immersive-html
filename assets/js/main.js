@@ -418,6 +418,25 @@
 		}, 100))
 	})
 }), $(function() {
+
+	$("#contact-form").on("submit", function(event) {
+		event.preventDefault();
+	  
+		$.ajax({
+		  url: "/",
+		  type: "POST",
+		  data: new FormData(this),
+		  processData: false,
+		  contentType: false,
+		  success: function() {
+			$("#contact-form")[0].reset(), $("#messages").text("Thank you for your submission, we'll get back to you soon :)"), console.log(e)
+		  },
+		  error: function(xhr, status, error) {
+			$("#messages").text(error);
+		  }
+		});
+	  });
+	  
 	$("#contact-form").on("submit", function(e) {
 		e.preventDefault(), $.ajax({
 			type: "POST",

@@ -211,7 +211,6 @@
 	margin-top: 50px;	
 }
 .cta {
-	margin-top: 40px;
 	font-weight: 900;
     border-radius: 5px;
     padding: 12px 18px;
@@ -339,6 +338,19 @@ html {
 }
 .download-btn a {
   margin: 0 10px;
+}
+.flex{
+  display: flex;
+}
+.items-start{
+  align-items: start;
+}
+.direction-column{
+  flex-direction: column;
+}
+.form-actions{
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .Arial-B {
   font-family: Arial Black;

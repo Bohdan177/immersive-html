@@ -431,6 +431,48 @@
 			}
 		})
 	})
+	
+	// Upload buttons
+	const maxFileSize = 8 * 1024 * 1024; // 2 MB in bytes
+	$('.upload-program').on('click', function() {
+		$('#inputProgram').click();
+	});
+	$('#inputProgram').on('change', function() {
+		const file = this.files[0]; // Get the selected file
+            $('#messages').text(''); // Clear any previous error message
+
+            if (file) {
+                // Check file size
+                if (file.size > maxFileSize) {
+                    $('#messages').text('File size exceeds 8 MB limit.');
+                    $(this).val(''); // Clear the file input
+                } else {
+                    const fileName = file.name;
+                    $('.upload-program-file').text(`File: ${fileName}`);
+                }
+            }
+	
+	});
+
+	$('.upload-floorplan').on('click', function() {
+		$('#inputFloorplan').click();
+	});
+	$('#inputFloorplan').on('change', function() {
+		const file = this.files[0]; // Get the selected file
+            $('#messages').text(''); // Clear any previous error message
+
+            if (file) {
+                // Check file size
+                if (file.size > maxFileSize) {
+                    $('#messages').text('File size exceeds 8 MB limit.');
+                    $(this).val(''); // Clear the file input
+                } else {
+                    const fileName = file.name;
+                    $('.upload-floorplan-text').text(`File: ${fileName}`);
+                }
+            }
+		
+	});
 });
 // preloader
 $(window).on("load", function() {

@@ -181,7 +181,7 @@ background: -webkit-linear-gradient(left,  #9357cc 0%,#2989d8 50%,#2cc99d 100%) 
           <div class="col-lg-12 no-gap section contact-form__wrap">
 
 
-                <form netlify id="contact-form" action="" method="POST" accept-charset="utf-8" class="form-ajax wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
+                <form style="width: fit-content;" netlify id="contact-form" action="" method="POST" accept-charset="utf-8" class="form-ajax wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
             
                     <div class="row ws-m">
 
@@ -261,11 +261,23 @@ background: -webkit-linear-gradient(left,  #9357cc 0%,#2989d8 50%,#2cc99d 100%) 
                             
                         </div>
                         <small class="privacy">We respect your privacy and do not tolerate spam and will never give, sell, rent your<br>information to any third party.</small>
-                        <input id="submit" type="submit" class="btn cta pull-right" value="Get a quote">
                         <div id="messages"></div>
- <div class="text-center download-btn">
-                <button class="btn-ghost">Upload program</button>
-                <button class="btn-ghost">Upload floorplan</button>
+              <div class="text-center download-btn flex items-start form-actions">
+                <div class="flex direction-column">
+                  <button type="file" class="btn-ghost upload-program">Upload program</button>
+                  <span class="upload-program-file"></span>
+                  <input id="inputProgram" type="file" style="display: none;"  />
+                  
+                </div>
+                <div class="flex direction-column">
+                  <button class="btn-ghost upload-floorplan">Upload floorplan</button>
+                  <span class="upload-floorplan-text"></span>
+                  <input id="inputFloorplan" type="file" style="display: none;"  />
+
+                </div>
+                
+                <input id="submit" type="submit" class="btn cta pull-right" value="Get a quote">
+
               </div>
                     </div>
 
@@ -275,13 +287,7 @@ background: -webkit-linear-gradient(left,  #9357cc 0%,#2989d8 50%,#2cc99d 100%) 
                 </form>
             </div>    
     
-            <!-- BTNS -->
-     <!--        <div class="row">
-              <div class="text-center download-btn">
-                <a href="#" class="btn cta">Upload program</a>
-                <a href="#" class="btn cta">Upload floorplan</a>
-              </div>
-            </div> -->
+        
 
         </div>
 

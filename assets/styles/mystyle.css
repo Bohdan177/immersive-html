@@ -263,6 +263,7 @@ h4 {
 
 .contact-form__wrap form {
 	margin: auto;
+  max-width: 700px;
 }
 .order-content {
 	padding-top: 50px;

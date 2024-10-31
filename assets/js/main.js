@@ -437,19 +437,7 @@
 		});
 	  });
 	  
-	$("#contact-form").on("submit", function(e) {
-		e.preventDefault(), $.ajax({
-			type: "POST",
-			url: $(this).attr("action"),
-			data: $(this).serialize(),
-			headers: {
-				Accept: "application/json"
-			},
-			success: function(e) {
-				$("#contact-form")[0].reset(), $("#messages").text("Thank you for your submission, we'll get back to you soon :)"), console.log(e)
-			}
-		})
-	})
+	
 	
 	// Upload buttons
 	const maxFileSize = 8 * 1024 * 1024; // 2 MB in bytes
